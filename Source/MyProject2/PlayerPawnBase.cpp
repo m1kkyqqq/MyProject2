@@ -38,6 +38,6 @@ void APlayerPawnBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 
 void APlayerPawnBase::CreateSnakeActor()
 {
-	SnakeActor = GetWorld()->SpawnActor<AsnakeBase>(SnakeActorClass, FTransform());
+	SnakeActor = GetWorld()->SpawnActor<Asnakebase>(SnakeActorClass, FTransform());
 }
 
