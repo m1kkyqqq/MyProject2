@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MyProject2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{722D75DA-97ED-4E7B-AFE8-9A220B21DE4D}</UniqueIdentifier>
+      <UniqueIdentifier>{591D0E50-5524-4D55-8413-2FDAF976CCAC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject2.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{7892540C-326C-4B7A-975C-94015947A4C1}</UniqueIdentifier>
+      <UniqueIdentifier>{771F7EB2-C675-415E-B858-D8FFB6F0A4FC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -26,7 +26,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MyProject2">
-      <UniqueIdentifier>{279BF51A-C1B6-4B55-8A55-C2D473F4D405}</UniqueIdentifier>
+      <UniqueIdentifier>{D451E8CD-30FD-4B95-869D-719C7B50B473}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject2\MyProject2.Build.cs">
       <Filter>Source\MyProject2</Filter>
