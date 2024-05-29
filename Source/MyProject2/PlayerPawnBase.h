@@ -7,7 +7,7 @@
 #include "PlayerPawnBase.generated.h"
 
 class UCameraComponent;
-class AsnakeBase;
+class Asnakebase;
 UCLASS()
 class MYPROJECT2_API APlayerPawnBase : public APawn
 {
@@ -21,10 +21,10 @@ public:
 	UCameraComponent* PawnCamera;
 
 	UPROPERTY(BlueprintReadWrite)
-	AsnakeBase* SnakeActor;
+	Asnakebase* SnakeActor;
 
 	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<AsnakeBase> SnakeActorClass;
+	TSubclassOf<Asnakebase> SnakeActorClass;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

@@ -2,6 +2,7 @@
 
 
 #include "snakebase.h"
+#include "SnakeElementBase"
 
 // Sets default values
 Asnakebase::Asnakebase()
@@ -15,6 +16,7 @@ Asnakebase::Asnakebase()
 void Asnakebase::BeginPlay()
 {
 	Super::BeginPlay();
+	GetWorld()->SpawnActor<ASnakeElementBase>(SnakeElementClass, GetActorTransform()); 
 	
 }
 
