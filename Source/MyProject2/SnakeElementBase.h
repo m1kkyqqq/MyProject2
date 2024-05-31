@@ -17,8 +17,8 @@ public:
 	// Sets default values for this actor's properties
 	ASnakeElementBase();
 
-	UPROPERTY(VisibleAnyWhere, BluprintReadOnly)
-	UStatickMeshComponent* MeshComponent;
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly)
+	UStaticMeshComponent* MeshComponent;
 
 protected:
 	// Called when the game starts or when spawned
