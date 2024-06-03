@@ -46,6 +46,10 @@ void EmptyLinkFunctionForGeneratedCodesnakebase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SnakeElements_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_SnakeElements;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MovementSpeed;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -81,11 +85,19 @@ void EmptyLinkFunctionForGeneratedCodesnakebase() {}
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_Asnakebase_Statics::NewProp_SnakeElements = { "SnakeElements", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Asnakebase, SnakeElements), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_Asnakebase_Statics::NewProp_SnakeElements_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Asnakebase_Statics::NewProp_SnakeElements_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Asnakebase_Statics::NewProp_MovementSpeed_MetaData[] = {
+		{ "Category", "snakebase" },
+		{ "ModuleRelativePath", "snakebase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_Asnakebase_Statics::NewProp_MovementSpeed = { "MovementSpeed", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Asnakebase, MovementSpeed), METADATA_PARAMS(Z_Construct_UClass_Asnakebase_Statics::NewProp_MovementSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Asnakebase_Statics::NewProp_MovementSpeed_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_Asnakebase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Asnakebase_Statics::NewProp_SnakeElementClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Asnakebase_Statics::NewProp_ElementSize,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Asnakebase_Statics::NewProp_SnakeElements_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Asnakebase_Statics::NewProp_SnakeElements,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Asnakebase_Statics::NewProp_MovementSpeed,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_Asnakebase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<Asnakebase>::IsAbstract,
@@ -114,7 +126,7 @@ void EmptyLinkFunctionForGeneratedCodesnakebase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Asnakebase, 1640295367);
+	IMPLEMENT_CLASS(Asnakebase, 3315446842);
 	template<> MYPROJECT2_API UClass* StaticClass<Asnakebase>()
 	{
 		return Asnakebase::StaticClass();
