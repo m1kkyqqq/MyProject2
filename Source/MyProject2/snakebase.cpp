@@ -18,7 +18,7 @@ Asnakebase::Asnakebase()
 void Asnakebase::BeginPlay()
 {
 	Super::BeginPlay();
-	SetActorTickInterval(MovementSpeed)
+	SetActorTickInterval(MovementSpeed);
 	AddSnakeElement(5);
 	
 	
@@ -45,11 +45,11 @@ void Asnakebase::AddSnakeElement(int ElementsNum)
 void Asnakebase::Move()
 {
 	FVector MovementVector;
-	float MovementSpeed = ElementSize;
+    MovementSpeed = ElementSize;
 	
 	switch (LastMoveDirection)
 	{
-		case EMovementDirection::UP;
+	case EMovementDirection::UP:
 	    MovementVector.X += MovementSpeed;
 		break;
 	case EMovementDirection::DOWN:
@@ -72,7 +72,7 @@ void Asnakebase::Move()
 		CurrentElement->SetActorLocation(PrevLocation);
 	}
 
-	SnakeElements[0]->AddActorWorldOffset
+	SnakeElements[0]->AddActorWorldOffset(MovementVector); // SetActorLocation(GetActorLocation()+MovementVector)
 }
 
 

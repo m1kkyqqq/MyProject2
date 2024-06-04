@@ -33,8 +33,6 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	float ElementSize;
 
-	UPROPERTY(EditDefaultsOnly)
-
 	UPROPERTY()
 	TArray<ASnakeElementBase*> SnakeElements;
 
