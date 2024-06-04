@@ -36,7 +36,8 @@ void Asnakebase::AddSnakeElement(int ElementsNum)
 	{
 		FVector NewLocation i * ElementSize, 0, 0);
 		FTransform NewTransform(NewLocation);
-		auto NewSnakeElem = GetWorld()->SpawnActor<ASnakeElementBase>(SnakeElementClass, NewTransform);
+		ASnakeElementBase* NewSnakeElem = GetWorld()->SpawnActor<ASnakeElementBase>(SnakeElementClass, NewTransform);
+		NewSnakeElem->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
 		SnakeElements.Add(NewSnakeElem);
 	}
 }
