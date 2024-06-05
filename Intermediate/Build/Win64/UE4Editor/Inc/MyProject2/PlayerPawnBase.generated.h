@@ -14,8 +14,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define MYPROJECT2_PlayerPawnBase_generated_h
 
 #define MyProject2_Source_MyProject2_PlayerPawnBase_h_14_SPARSE_DATA
-#define MyProject2_Source_MyProject2_PlayerPawnBase_h_14_RPC_WRAPPERS
-#define MyProject2_Source_MyProject2_PlayerPawnBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define MyProject2_Source_MyProject2_PlayerPawnBase_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execHandlePlayerHorizontalInput); \
+	DECLARE_FUNCTION(execHandlePlayerVerticalInput);
+
+
+#define MyProject2_Source_MyProject2_PlayerPawnBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execHandlePlayerHorizontalInput); \
+	DECLARE_FUNCTION(execHandlePlayerVerticalInput);
+
+
 #define MyProject2_Source_MyProject2_PlayerPawnBase_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerPawnBase(); \

@@ -37,8 +37,13 @@ void Asnakebase::AddSnakeElement(int ElementsNum)
 	{
 		FVector NewLocation( i * ElementSize, 0, 0);
 		FTransform NewTransform(NewLocation);
-		ASnakeElementBase* NewSnakeElem = GetWorld()->SpawnActor<ASnakeElementBase>(SnakeElementClass, NewTransform);
+		ASnakeElementBase * NewSnakeElem = GetWorld()->SpawnActor<ASnakeElementBase>(SnakeElementClass, NewTransform);
 		SnakeElements.Add(NewSnakeElem);
+		int32 ElemIndex = SnakeElements.Find(NewSnakeElem)
+		if (ElemIndex == 0)
+		{
+			NewSnakeElem->SetFirstElementType();
+		}
 	}
 }
 
@@ -64,7 +69,7 @@ void Asnakebase::Move()
 
 	//AddActorWorldOffset(MovementVector);
 
-	for (int i = SnakeElements.Num() - 1; i > 0; i--)
+	for (int i = SnakeElements.Num() - 1; i>0; i--) 
 	{
 		auto CurrentElement = SnakeElements[i];
 		auto PrevElement = SnakeElements[i - 1];
