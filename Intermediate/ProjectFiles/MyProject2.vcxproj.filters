@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MyProject2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{D8AEF801-4A73-43F9-AB61-1515C499F9AE}</UniqueIdentifier>
+      <UniqueIdentifier>{5AE96334-F36A-4BA3-8662-9DE043C74939}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject2.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{9B6ABE19-A568-42B1-8B02-6462046A1D51}</UniqueIdentifier>
+      <UniqueIdentifier>{58A7058B-7124-4FAB-8941-5ECE9A857B07}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -25,8 +25,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\MyProject2">
-      <UniqueIdentifier>{0BFBAAAE-AFE0-4A29-A14A-A27BF354E6C8}</UniqueIdentifier>
+      <UniqueIdentifier>{2B7CD763-0AEF-4DD0-A179-1EADC4A03199}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject2\MyProject2.Build.cs">
       <Filter>Source\MyProject2</Filter>

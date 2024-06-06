@@ -33,13 +33,12 @@ void Asnakebase::Tick(float DeltaTime)
 
 void Asnakebase::AddSnakeElement(int ElementsNum)
 {
-	for (int i = 0; i < ElementsNum; ++i)
+	for (int i = 0; i < ElementsNum; i++)
 	{
-		FVector NewLocation( i * ElementSize, 0, 0);
+		FVector NewLocation( SnakeElements.Num() * ElementSize, 0, 0);
 		FTransform NewTransform(NewLocation);
 		ASnakeElementBase * NewSnakeElem = GetWorld()->SpawnActor<ASnakeElementBase>(SnakeElementClass, NewTransform);
-		SnakeElements.Add(NewSnakeElem);
-		int32 ElemIndex = SnakeElements.Find(NewSnakeElem)
+		int32 ElemIndex = SnakeElements.Find(NewSnakeElem);
 		if (ElemIndex == 0)
 		{
 			NewSnakeElem->SetFirstElementType();
@@ -49,7 +48,7 @@ void Asnakebase::AddSnakeElement(int ElementsNum)
 
 void Asnakebase::Move()
 {
-	FVector MovementVector;
+	FVector MovementVector(FVector::ZeroVector);
     MovementSpeed = ElementSize;
 	
 	switch (LastMoveDirection)
@@ -58,10 +57,11 @@ void Asnakebase::Move()
 	    MovementVector.X += MovementSpeed;
 		break;
 	case EMovementDirection::DOWN:
-		MovementVector.X += MovementSpeed;
+		MovementVector.X -= MovementSpeed;
 		break;
 	case EMovementDirection::LEFT:
 		MovementVector.Y += MovementSpeed;
+		break;
 	case EMovementDirection::RIGHT:
 		MovementVector.Y -= MovementSpeed;
 		break;

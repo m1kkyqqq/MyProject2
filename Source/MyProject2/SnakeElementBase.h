@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "SnakeElementBase.generated.h"
 
-class UStatickMeshComponent;
+class UStaticMeshComponent;
 
 UCLASS()
 class MYPROJECT2_API ASnakeElementBase : public AActor
