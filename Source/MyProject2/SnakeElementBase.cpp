@@ -24,3 +24,7 @@ void ASnakeElementBase::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
+
+void ASnakeElementBase::SetFirstElementType_Implemintation()
+{
+}
