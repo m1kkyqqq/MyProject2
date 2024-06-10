@@ -21,7 +21,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define MyProject2_Source_MyProject2_SnakeElementBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	virtual void SetFirstElementType_Implementation(); \
  \
 	DECLARE_FUNCTION(execSetFirstElementType);
 
