@@ -65,6 +65,7 @@ void Asnakebase::Move()
 	case EMovementDirection::RIGHT:
 		MovementVector.Y -= MovementSpeed;
 		break;
+		bool bCanTurn = true;
 	}
 
 	//AddActorWorldOffset(MovementVector);
@@ -78,7 +79,10 @@ void Asnakebase::Move()
 	}
 
 	SnakeElements[0]->AddActorWorldOffset(MovementVector); // SetActorLocation(GetActorLocation()+MovementVector)
+
+	bool bCanTurn = true;
 }
+
 
 
 
