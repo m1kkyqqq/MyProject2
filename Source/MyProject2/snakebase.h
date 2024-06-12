@@ -42,6 +42,8 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	float MovementSpeed = 0.f;
 
+	bool bCanTurn = true;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
