@@ -9,13 +9,15 @@ ASnakeElementBase::ASnakeElementBase()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
+	MeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	MeshComponent->SetCollisionResponseToAllChanels(ECR_Overlap);
 }
 
 // Called when the game starts or when spawned
 void ASnakeElementBase::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	MeshComponent->OnComponentBeginOverlap.AddDynamic(this, &ASnakeElementBase::)
 }
 
 // Called every frame
@@ -26,5 +28,9 @@ void ASnakeElementBase::Tick(float DeltaTime)
 }
 
 void ASnakeElementBase::SetFirstElementType_Implementation()
+{
+}
+
+void ASnakeElementBase::Interact(AActor* Interactor)
 {
 }

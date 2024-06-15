@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MyProject2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{5AE96334-F36A-4BA3-8662-9DE043C74939}</UniqueIdentifier>
+      <UniqueIdentifier>{A0D36D8B-00BE-4E81-865E-F02EAD80A845}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject2.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{58A7058B-7124-4FAB-8941-5ECE9A857B07}</UniqueIdentifier>
+      <UniqueIdentifier>{CBD88BED-3DB0-4FA0-93AB-7AB50E4E94ED}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -29,8 +29,20 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MyProject2">
-      <UniqueIdentifier>{2B7CD763-0AEF-4DD0-A179-1EADC4A03199}</UniqueIdentifier>
+      <UniqueIdentifier>{172D258D-3D20-48AC-8EB5-20AE2D5AD781}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyProject2\food.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject2\food.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyProject2\MyInterface.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject2\MyInterface.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
     <None Include="..\..\Source\MyProject2\MyProject2.Build.cs">
       <Filter>Source\MyProject2</Filter>
     </None>
