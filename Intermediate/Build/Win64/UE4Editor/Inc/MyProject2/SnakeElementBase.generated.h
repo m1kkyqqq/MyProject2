@@ -8,26 +8,31 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef MYPROJECT2_SnakeElementBase_generated_h
 #error "SnakeElementBase.generated.h already included, missing '#pragma once' in SnakeElementBase.h"
 #endif
 #define MYPROJECT2_SnakeElementBase_generated_h
 
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_SPARSE_DATA
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_RPC_WRAPPERS \
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_SPARSE_DATA
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_RPC_WRAPPERS \
 	virtual void SetFirstElementType_Implementation(); \
  \
+	DECLARE_FUNCTION(execHandleBeginOverlap); \
 	DECLARE_FUNCTION(execSetFirstElementType);
 
 
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execHandleBeginOverlap); \
 	DECLARE_FUNCTION(execSetFirstElementType);
 
 
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_EVENT_PARMS
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_CALLBACK_WRAPPERS
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_INCLASS_NO_PURE_DECLS \
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_EVENT_PARMS
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_CALLBACK_WRAPPERS
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASnakeElementBase(); \
 	friend struct Z_Construct_UClass_ASnakeElementBase_Statics; \
@@ -36,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(ASnakeElementBase)
 
 
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_INCLASS \
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesASnakeElementBase(); \
 	friend struct Z_Construct_UClass_ASnakeElementBase_Statics; \
@@ -45,7 +50,7 @@ public: \
 	DECLARE_SERIALIZER(ASnakeElementBase)
 
 
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_STANDARD_CONSTRUCTORS \
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASnakeElementBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASnakeElementBase) \
@@ -58,7 +63,7 @@ private: \
 public:
 
 
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_ENHANCED_CONSTRUCTORS \
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASnakeElementBase(ASnakeElementBase&&); \
@@ -69,33 +74,33 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASnakeElementBase)
 
 
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_PRIVATE_PROPERTY_OFFSET
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_11_PROLOG \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_EVENT_PARMS
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_PRIVATE_PROPERTY_OFFSET
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_12_PROLOG \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_EVENT_PARMS
 
 
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_GENERATED_BODY_LEGACY \
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_PRIVATE_PROPERTY_OFFSET \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_SPARSE_DATA \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_RPC_WRAPPERS \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_CALLBACK_WRAPPERS \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_INCLASS \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_STANDARD_CONSTRUCTORS \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_PRIVATE_PROPERTY_OFFSET \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_SPARSE_DATA \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_RPC_WRAPPERS \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_CALLBACK_WRAPPERS \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_INCLASS \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define MyProject2_Source_MyProject2_SnakeElementBase_h_14_GENERATED_BODY \
+#define MyProject2_Source_MyProject2_SnakeElementBase_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_PRIVATE_PROPERTY_OFFSET \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_SPARSE_DATA \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_CALLBACK_WRAPPERS \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_INCLASS_NO_PURE_DECLS \
-	MyProject2_Source_MyProject2_SnakeElementBase_h_14_ENHANCED_CONSTRUCTORS \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_PRIVATE_PROPERTY_OFFSET \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_SPARSE_DATA \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_CALLBACK_WRAPPERS \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_INCLASS_NO_PURE_DECLS \
+	MyProject2_Source_MyProject2_SnakeElementBase_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

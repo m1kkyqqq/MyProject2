@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodefood() {}
 	MYPROJECT2_API UClass* Z_Construct_UClass_Afood();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_MyProject2();
+	MYPROJECT2_API UClass* Z_Construct_UClass_UMyInterface_NoRegister();
 // End Cross Module References
 	void Afood::StaticRegisterNativesAfood()
 	{
@@ -31,6 +32,7 @@ void EmptyLinkFunctionForGeneratedCodefood() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -44,6 +46,9 @@ void EmptyLinkFunctionForGeneratedCodefood() {}
 		{ "ModuleRelativePath", "food.h" },
 	};
 #endif
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_Afood_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UMyInterface_NoRegister, (int32)VTABLE_OFFSET(Afood, IMyInterface), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_Afood_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<Afood>::IsAbstract,
 	};
@@ -54,11 +59,11 @@ void EmptyLinkFunctionForGeneratedCodefood() {}
 		DependentSingletons,
 		nullptr,
 		nullptr,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_Afood_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_Afood_Statics::Class_MetaDataParams))
 	};
@@ -71,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodefood() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afood, 351991317);
+	IMPLEMENT_CLASS(Afood, 4264230464);
 	template<> MYPROJECT2_API UClass* StaticClass<Afood>()
 	{
 		return Afood::StaticClass();

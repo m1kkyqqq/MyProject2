@@ -4,11 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Interactable.h"
+#include "Myinteface.h"
 #include "food.generated.h"
 
 UCLASS()
-class MYPROJECT2_API Afood : public AActor, public IInteractable 
+class MYPROJECT2_API Afood : public AActor, public IMyinterface 
 {
 	GENERATED_BODY()
 	
