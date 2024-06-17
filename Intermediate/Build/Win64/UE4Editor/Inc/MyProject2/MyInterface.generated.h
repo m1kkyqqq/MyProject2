@@ -8,23 +8,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AActor;
 #ifdef MYPROJECT2_MyInterface_generated_h
 #error "MyInterface.generated.h already included, missing '#pragma once' in MyInterface.h"
 #endif
 #define MYPROJECT2_MyInterface_generated_h
 
 #define MyProject2_Source_MyProject2_MyInterface_h_13_SPARSE_DATA
-#define MyProject2_Source_MyProject2_MyInterface_h_13_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execInteract);
-
-
-#define MyProject2_Source_MyProject2_MyInterface_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execInteract);
-
-
+#define MyProject2_Source_MyProject2_MyInterface_h_13_RPC_WRAPPERS
+#define MyProject2_Source_MyProject2_MyInterface_h_13_RPC_WRAPPERS_NO_PURE_DECLS
 #define MyProject2_Source_MyProject2_MyInterface_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	MYPROJECT2_API UMyInterface(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \

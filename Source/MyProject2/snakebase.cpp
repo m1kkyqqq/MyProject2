@@ -38,6 +38,7 @@ void Asnakebase::AddSnakeElement(int ElementsNum)
 		FVector NewLocation( SnakeElements.Num() * ElementSize, 0, 0);
 		FTransform NewTransform(NewLocation);
 		ASnakeElementBase * NewSnakeElem = GetWorld()->SpawnActor<ASnakeElementBase>(SnakeElementClass, NewTransform);
+		NewSnakeElem->SnakeOwner - this;
 		int32 ElemIndex = SnakeElements.Add(NewSnakeElem);
 		if (ElemIndex == 0)
 		{
@@ -49,27 +50,27 @@ void Asnakebase::AddSnakeElement(int ElementsNum)
 void Asnakebase::Move()
 {
 	FVector MovementVector(FVector::ZeroVector);
-    MovementSpeed = ElementSize;
-	
+
 	switch (LastMoveDirection)
 	{
 	case EMovementDirection::UP:
-	    MovementVector.X += MovementSpeed;
+		MovementVector.X += ElementSize;
 		break;
 	case EMovementDirection::DOWN:
-		MovementVector.X -= MovementSpeed;
+		MovementVector.X -= ElementSize;
 		break;
 	case EMovementDirection::LEFT:
-		MovementVector.Y += MovementSpeed;
+		MovementVector.Y += ElementSize;
 		break;
 	case EMovementDirection::RIGHT:
-		MovementVector.Y -= MovementSpeed;
+		MovementVector.Y -= ElementSize;
 		break;
 	}
 
 	//AddActorWorldOffset(MovementVector);
+	SnakeElements[0]->ToggleCollision();
 
-	for (int i = SnakeElements.Num() - 1; i>0; i--) 
+	for (int i = SnakeElements.Num() - 1; i > 0; i--)
 	{
 		auto CurrentElement = SnakeElements[i];
 		auto PrevElement = SnakeElements[i - 1];
@@ -78,8 +79,22 @@ void Asnakebase::Move()
 	}
 
 	SnakeElements[0]->AddActorWorldOffset(MovementVector); // SetActorLocation(GetActorLocation()+MovementVector)
+	SnakeElements[0]->ToggleCollision();
+}
 
-	bool bCanTurn = true;
+void Asnakebase::SnakeElementOverlap(ASnakeElementBase* OverlappedElement, AActor* Other)
+{
+	if (IsValid(OverlappedElement))
+	{
+		int32 ElemIndex
+	    SnakeElements.Find(OverlappedElement, ElemIndex);
+		bool bisFirst = ElemIndex == 0;
+		IMyInterface* MyInterfaceInterface = Cast<IMyInterface>(Other);
+		if (MyInterfaceInterface)
+		{
+			MyInterfaceInterface->Interact(this, bisFirst);
+		}
+	}
 }
 
 

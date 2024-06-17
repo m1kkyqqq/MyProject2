@@ -2,6 +2,7 @@
 
 
 #include "food.h"
+#include "SnakeBase.h"
 
 // Sets default values
 Afood::Afood()
@@ -25,7 +26,15 @@ void Afood::Tick(float DeltaTime)
 
 }
 
-void Afood::Interact(AActor* interactor)
+void Afood::Interact(AActor* interactor, bool bIsHead)
 {
+	if (bIsHead)
+	{
+		auto Snake = Cast<ASnakeBase>(Interactor);
+		if (IsValid(Snake))
+		{
+			Snake->AddSnakeElement();
+		}
+	}
 }
 

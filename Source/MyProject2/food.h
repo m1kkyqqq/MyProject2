@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "MyInteface.h"
+#include "MyInterface.h"
 #include "food.generated.h"
 
 UCLASS()
@@ -24,6 +24,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	virtual void Interact(AActor* Interactor) override;
+	virtual void Interact(AActor* Interactor, bool bIsHead) override;
 
 };

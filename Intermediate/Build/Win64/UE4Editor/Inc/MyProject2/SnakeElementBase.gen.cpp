@@ -21,7 +21,16 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	MYPROJECT2_API UClass* Z_Construct_UClass_Asnakebase_NoRegister();
+	MYPROJECT2_API UClass* Z_Construct_UClass_UMyInterface_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ASnakeElementBase::execToggleCollision)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ToggleCollision();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ASnakeElementBase::execHandleBeginOverlap)
 	{
 		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComponent);
@@ -53,6 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "HandleBeginOverlap", &ASnakeElementBase::execHandleBeginOverlap },
 			{ "SetFirstElementType", &ASnakeElementBase::execSetFirstElementType },
+			{ "ToggleCollision", &ASnakeElementBase::execToggleCollision },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -159,6 +169,28 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ASnakeElementBase_ToggleCollision_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASnakeElementBase_ToggleCollision_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SnakeElementBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASnakeElementBase_ToggleCollision_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASnakeElementBase, nullptr, "ToggleCollision", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASnakeElementBase_ToggleCollision_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ASnakeElementBase_ToggleCollision_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ASnakeElementBase_ToggleCollision()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASnakeElementBase_ToggleCollision_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ASnakeElementBase_NoRegister()
 	{
 		return ASnakeElementBase::StaticClass();
@@ -174,7 +206,12 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SnakeOwner_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SnakeOwner;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -185,6 +222,7 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_ASnakeElementBase_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ASnakeElementBase_HandleBeginOverlap, "HandleBeginOverlap" }, // 3075771056
 		{ &Z_Construct_UFunction_ASnakeElementBase_SetFirstElementType, "SetFirstElementType" }, // 2325014868
+		{ &Z_Construct_UFunction_ASnakeElementBase_ToggleCollision, "ToggleCollision" }, // 3672903448
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnakeElementBase_Statics::Class_MetaDataParams[] = {
@@ -200,9 +238,19 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASnakeElementBase_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnakeElementBase, MeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASnakeElementBase_Statics::NewProp_MeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnakeElementBase_Statics::NewProp_MeshComponent_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnakeElementBase_Statics::NewProp_SnakeOwner_MetaData[] = {
+		{ "ModuleRelativePath", "SnakeElementBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASnakeElementBase_Statics::NewProp_SnakeOwner = { "SnakeOwner", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnakeElementBase, SnakeOwner), Z_Construct_UClass_Asnakebase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASnakeElementBase_Statics::NewProp_SnakeOwner_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnakeElementBase_Statics::NewProp_SnakeOwner_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASnakeElementBase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnakeElementBase_Statics::NewProp_MeshComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnakeElementBase_Statics::NewProp_SnakeOwner,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ASnakeElementBase_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UMyInterface_NoRegister, (int32)VTABLE_OFFSET(ASnakeElementBase, IMyInterface), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASnakeElementBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASnakeElementBase>::IsAbstract,
 	};
@@ -213,11 +261,11 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 		DependentSingletons,
 		FuncInfo,
 		Z_Construct_UClass_ASnakeElementBase_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ASnakeElementBase_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ASnakeElementBase_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ASnakeElementBase_Statics::Class_MetaDataParams))
 	};
@@ -230,7 +278,7 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASnakeElementBase, 3221522082);
+	IMPLEMENT_CLASS(ASnakeElementBase, 2223764425);
 	template<> MYPROJECT2_API UClass* StaticClass<ASnakeElementBase>()
 	{
 		return ASnakeElementBase::StaticClass();

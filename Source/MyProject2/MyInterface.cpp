@@ -5,7 +5,7 @@
 
 // Add default functionality here for any IMyInterface functions that are not pure virtual.
 
-void IMyInterface::Interact(AActor* Interactor)
-{
-
-}
+void IMyInterface::Interact(AActor* Interactor, bool bIsHead)
+ {
+	 
+ }
