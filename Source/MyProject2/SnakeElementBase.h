@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Myinterface.h"
+#include "MyInterface.h"
 #include "SnakeElementBase.generated.h"
 
 class UStaticMeshComponent;
 
 UCLASS()
-class MYPROJECT2_API ASnakeElementBase : public AActor, public Myinterface
+class MYPROJECT2_API ASnakeElementBase : public AActor, public MyInterface
 {
 	GENERATED_BODY()
 	
