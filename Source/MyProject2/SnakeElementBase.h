@@ -8,7 +8,7 @@
 #include "SnakeElementBase.generated.h"
 
 class UStaticMeshComponent;
-class ASnakeBase;
+class Asnakebase;
 
 UCLASS()
 class MYPROJECT2_API ASnakeElementBase : public AActor, public IMyInterface 
@@ -23,7 +23,7 @@ public:
 	UStaticMeshComponent* MeshComponent;
 
 	UPROPERTY()
-	ASnakeBase* SnakeOwner;
+	Asnakebase* SnakeOwner;
 
 protected:
 	// Called when the game starts or when spawned
