@@ -8,13 +8,13 @@
 #include "food.generated.h"
 
 UCLASS()
-class MYPROJECT2_API Afood : public AActor, public IMyinterface 
+class MYPROJECT2_API Afood : public AActor, public IMyInterface 
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AFood();
+	Afood();
 
 protected:
 	// Called when the game starts or when spawned

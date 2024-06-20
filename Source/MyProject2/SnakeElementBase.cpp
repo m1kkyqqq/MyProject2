@@ -39,6 +39,7 @@ void ASnakeElementBase::Interact(AActor* Interactor, bool bIsHead)
 		{
 			Snake->Destroy();
 		}
+}
 
 void ASnakeElementBase::HandleBeginOverlap(UPrimitiveComponent* OverlappedComponent,
 	AActor* OtherActor, UPrimitiveComponent* OtherComp,
@@ -55,7 +56,7 @@ void ASnakeElementBase::ToggleCollision()
 {
 	if (MeshComponent->GetCollisionEnabled() == ECollisionEnabled::NoCollision)
 	{
-		MeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly)
+		MeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	}
 	else
 	{

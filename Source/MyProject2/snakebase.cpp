@@ -38,7 +38,7 @@ void Asnakebase::AddSnakeElement(int ElementsNum)
 		FVector NewLocation( SnakeElements.Num() * ElementSize, 0, 0);
 		FTransform NewTransform(NewLocation);
 		ASnakeElementBase * NewSnakeElem = GetWorld()->SpawnActor<ASnakeElementBase>(SnakeElementClass, NewTransform);
-		NewSnakeElem->SnakeOwner - this;
+		NewSnakeElem->SnakeOwner = this;
 		int32 ElemIndex = SnakeElements.Add(NewSnakeElem);
 		if (ElemIndex == 0)
 		{
@@ -86,7 +86,7 @@ void Asnakebase::SnakeElementOverlap(ASnakeElementBase* OverlappedElement, AActo
 {
 	if (IsValid(OverlappedElement))
 	{
-		int32 ElemIndex
+		int32 ElemIndex;
 	    SnakeElements.Find(OverlappedElement, ElemIndex);
 		bool bisFirst = ElemIndex == 0;
 		IMyInterface* MyInterfaceInterface = Cast<IMyInterface>(Other);

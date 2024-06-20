@@ -2,7 +2,7 @@
 
 
 #include "food.h"
-#include "SnakeBase.h"
+#include "snakebase.h"
 
 // Sets default values
 Afood::Afood()
@@ -30,7 +30,7 @@ void Afood::Interact(AActor* interactor, bool bIsHead)
 {
 	if (bIsHead)
 	{
-		auto Snake = Cast<ASnakeBase>(Interactor);
+		auto Snake = Cast<Asnakebase>(interactor);
 		if (IsValid(Snake))
 		{
 			Snake->AddSnakeElement();
