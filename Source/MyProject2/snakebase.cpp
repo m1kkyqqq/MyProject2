@@ -77,7 +77,7 @@ void Asnakebase::Move()
 		FVector PrevLocation = PrevElement->GetActorLocation();
 		CurrentElement->SetActorLocation(PrevLocation);
 	}
-	bCanTurn = True;
+	bCanTurn = true;
 	SnakeElements[0]->AddActorWorldOffset(MovementVector); // SetActorLocation(GetActorLocation()+MovementVector)
 	SnakeElements[0]->ToggleCollision();
 }
