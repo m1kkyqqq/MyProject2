@@ -25,14 +25,7 @@ void Afoodspeed::Tick(float DeltaTime)
 
 }
 
-void activateSpeedBoost()
+void Afoodspeed::Interact(AActor* Interactor), bool bIsHead, float SpeedCoeff);
 {
-    originalTickInterval = GetTickInterval(); // Сохраняем изначальное значение TickInterval
-    SetTickInterval(originalTickInterval / 2); // Устанавливаем ускоренное значение TickInterval
-    speedBoostDuration = 100; // Продолжительность ускорения (в примере - 100 обновлений экрана)
-}
-
-void deactivateSpeedBoost()
-{
-    SetTickInterval(originalTickInterval); // Восстанавливаем изначальное значение TickInterval
+	Super::Interact(Interactor, bIsHead, SpeedC);
 }

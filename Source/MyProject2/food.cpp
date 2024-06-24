@@ -26,7 +26,7 @@ void Afood::Tick(float DeltaTime)
 
 }
 
-void Afood::Interact(AActor* interactor, bool bIsHead)
+void Afood::Interact(AActor* interactor, bool bIsHead, float SpeedCoeff)
 {
 	if (bIsHead)
 	{

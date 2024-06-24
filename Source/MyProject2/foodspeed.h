@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "food.h"
 #include "GameFramework/Actor.h"
 #include "foodspeed.generated.h"
 
 UCLASS()
-class MYPROJECT2_API Afoodspeed : public AActor
+class MYPROJECT2_API Afoodspeed : public Afood
 {
 	GENERATED_BODY()
 	

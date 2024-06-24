@@ -32,7 +32,7 @@ void ASnakeElementBase::SetFirstElementType_Implementation()
 	MeshComponent->OnComponentBeginOverlap.AddDynamic(this, &ASnakeElementBase::HandleBeginOverlap);
 }
 
-void ASnakeElementBase::Interact(AActor* Interactor, bool bIsHead)
+void ASnakeElementBase::Interact(AActor* Interactor, bool bIsHead, float SpeedCoeff)
 {
 	auto Snake = Cast<Asnakebase>(Interactor);
 		if (IsValid(Snake))

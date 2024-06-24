@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodefoodspeed() {}
 // Cross Module References
 	MYPROJECT2_API UClass* Z_Construct_UClass_Afoodspeed_NoRegister();
 	MYPROJECT2_API UClass* Z_Construct_UClass_Afoodspeed();
-	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	MYPROJECT2_API UClass* Z_Construct_UClass_Afood();
 	UPackage* Z_Construct_UPackage__Script_MyProject2();
 // End Cross Module References
 	void Afoodspeed::StaticRegisterNativesAfoodspeed()
@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodefoodspeed() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_Afoodspeed_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AActor,
+		(UObject* (*)())Z_Construct_UClass_Afood,
 		(UObject* (*)())Z_Construct_UPackage__Script_MyProject2,
 	};
 #if WITH_METADATA
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodefoodspeed() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afoodspeed, 1733162184);
+	IMPLEMENT_CLASS(Afoodspeed, 825727901);
 	template<> MYPROJECT2_API UClass* StaticClass<Afoodspeed>()
 	{
 		return Afoodspeed::StaticClass();

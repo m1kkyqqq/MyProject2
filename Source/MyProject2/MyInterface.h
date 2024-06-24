@@ -22,5 +22,5 @@ class MYPROJECT2_API IMyInterface
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void Interact(AActor* Interactor, bool bIsHead);
+	virtual void Interact(AActor* Interactor, bool bIsHead, float SpeedCoeff);
 };

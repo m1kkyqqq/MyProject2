@@ -37,7 +37,7 @@ public:
 	void SetFirstElementType();
 	void SetFirstElementType_Implementation();
 
-	virtual void Interact(AActor* Interactor, bool bIsHead) override;
+	virtual void Interact(AActor* Interactor, bool bIsHead, float SpeedCoeff) override;
 
 	UFUNCTION()
 	void HandleBeginOverlap(UPrimitiveComponent* OverlappedComponent,

@@ -96,7 +96,7 @@ void Asnakebase::SnakeElementOverlap(ASnakeElementBase* OverlappedElement, AActo
 		IMyInterface* MyInterfaceInterface = Cast<IMyInterface>(Other);
 		if (MyInterfaceInterface)
 		{
-			MyInterfaceInterface->Interact(this, bisFirst);
+			MyInterfaceInterface->Interact(this, bisFirst, 1.f);
 		}
 	}
 }

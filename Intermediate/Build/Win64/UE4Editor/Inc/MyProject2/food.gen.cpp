@@ -32,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodefood() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpeedC_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SpeedC;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -46,6 +51,16 @@ void EmptyLinkFunctionForGeneratedCodefood() {}
 		{ "ModuleRelativePath", "food.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afood_Statics::NewProp_SpeedC_MetaData[] = {
+		{ "Category", "food" },
+		{ "ModuleRelativePath", "food.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_Afood_Statics::NewProp_SpeedC = { "SpeedC", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afood, SpeedC), METADATA_PARAMS(Z_Construct_UClass_Afood_Statics::NewProp_SpeedC_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afood_Statics::NewProp_SpeedC_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_Afood_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afood_Statics::NewProp_SpeedC,
+	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_Afood_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UMyInterface_NoRegister, (int32)VTABLE_OFFSET(Afood, IMyInterface), false },
 		};
@@ -58,11 +73,11 @@ void EmptyLinkFunctionForGeneratedCodefood() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_Afood_Statics::PropPointers,
 		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_Afood_Statics::PropPointers),
 		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_Afood_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_Afood_Statics::Class_MetaDataParams))
@@ -76,7 +91,7 @@ void EmptyLinkFunctionForGeneratedCodefood() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afood, 4264230464);
+	IMPLEMENT_CLASS(Afood, 2862581727);
 	template<> MYPROJECT2_API UClass* StaticClass<Afood>()
 	{
 		return Afood::StaticClass();
