@@ -25,7 +25,7 @@ void Afoodspeed::Tick(float DeltaTime)
 
 }
 
-void Afoodspeed::Interact(AActor* Interactor), bool bIsHead, float SpeedCoeff);
+void Afoodspeed::Interact(AActor* Interactor), bool bIsHead, float SpeedCoeff)
 {
 	Super::Interact(Interactor, bIsHead, SpeedC);
 }
