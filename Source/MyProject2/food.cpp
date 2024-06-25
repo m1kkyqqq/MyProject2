@@ -34,6 +34,7 @@ void Afood::Interact(AActor* interactor, bool bIsHead, float SpeedCoeff)
 		if (IsValid(Snake))
 		{
 			Snake->AddSnakeElement();
+			Snake->SetActorTickInterval(Snake->GetActorTickInterval()* SpeedCoeff);
 			Destroy();
 		}
 	}

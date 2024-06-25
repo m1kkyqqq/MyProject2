@@ -2,7 +2,8 @@
 
 
 #include "foodspeed.h"
-#include "snakebase.h"
+
+
 // Sets default values
 Afoodspeed::Afoodspeed()
 {
