@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MyProject2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{2E284AB5-1081-485E-AFD5-FC4CC8B503AA}</UniqueIdentifier>
+      <UniqueIdentifier>{FB666202-8FF2-41A7-A85A-B61557EF542D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject2.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{622AF8C4-9ED8-4623-BD6C-D0F81FA02979}</UniqueIdentifier>
+      <UniqueIdentifier>{A22095D4-6304-4306-AAD3-8E97E32C0F84}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -29,8 +29,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MyProject2">
-      <UniqueIdentifier>{5851FB7D-8B74-4555-9770-D3AF660931C8}</UniqueIdentifier>
+      <UniqueIdentifier>{543740BA-EF50-45CB-999D-3D42223CDF82}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyProject2\blocksnake.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject2\blocksnake.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyProject2\food.cpp">
       <Filter>Source\MyProject2</Filter>
     </ClCompile>
