@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "blocksnake.generated.h"
+#include "MyInterface.h"
+
 
 UCLASS()
 class MYPROJECT2_API Ablocksnake : public AActor, public IMyInterface
@@ -22,5 +24,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	void Interact(AActor* interactor, bool bIsHead, float SpeedCoeff);
 
 };

@@ -2,6 +2,7 @@
 
 
 #include "blocksnake.h"
+#include "snakebase.h"
 
 // Sets default values
 Ablocksnake::Ablocksnake()
