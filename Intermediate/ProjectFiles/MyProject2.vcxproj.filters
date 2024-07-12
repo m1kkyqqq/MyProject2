@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MyProject2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{FB666202-8FF2-41A7-A85A-B61557EF542D}</UniqueIdentifier>
+      <UniqueIdentifier>{2909187E-0324-4F4B-98B1-921026AD51FE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject2.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{A22095D4-6304-4306-AAD3-8E97E32C0F84}</UniqueIdentifier>
+      <UniqueIdentifier>{5B1A24DA-77AE-45DF-8285-D1B72FE44BD5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -29,7 +29,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MyProject2">
-      <UniqueIdentifier>{543740BA-EF50-45CB-999D-3D42223CDF82}</UniqueIdentifier>
+      <UniqueIdentifier>{8051FEF4-2342-47F7-950A-853C96385DDB}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MyProject2\blocksnake.cpp">
       <Filter>Source\MyProject2</Filter>
@@ -68,6 +68,12 @@
       <Filter>Source\MyProject2</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyProject2\MyProject2GameModeBase.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyProject2\MyUserWidget2121.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject2\MyUserWidget2121.h">
       <Filter>Source\MyProject2</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\MyProject2\PlayerPawnBase.cpp">
