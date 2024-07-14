@@ -26,6 +26,7 @@ void Ablocksnake::Tick(float DeltaTime)
 
 }
 
+
 void Ablocksnake::Interact(AActor* interactor, bool bIsHead, float SpeedCoeff)
 
 {

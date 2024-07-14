@@ -26,6 +26,20 @@ void Afood::Tick(float DeltaTime)
 
 }
 
+void Afood::RespawnFood()
+{
+	FVector NewLocation = FVector(/* Новые координаты X, Y, Z */);
+	FRotator NewRotation = FRotator(/* Новые углы поворота */);
+
+	Afood* NewFood = GetWorld()->SpawnActor<Afood>(/* Параметры конструктора */);
+	if (NewFood)
+	{
+		NewFood->SetActorLocation(NewLocation);
+		NewFood->SetActorRotation(NewRotation);
+	}
+}
+
+
 void Afood::Interact(AActor* interactor, bool bIsHead, float SpeedCoeff)
 {
 	if (bIsHead)
@@ -35,7 +49,7 @@ void Afood::Interact(AActor* interactor, bool bIsHead, float SpeedCoeff)
 		{
 			Snake->AddSnakeElement();
 			Snake->SetActorTickInterval(Snake->GetActorTickInterval()* SpeedCoeff);
-			Destroy();
+			RespawnFood();
 		}
 	}
 }
