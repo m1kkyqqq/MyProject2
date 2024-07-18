@@ -37,10 +37,10 @@
     <ClInclude Include="..\..\Source\MyProject2\blocksnake.h">
       <Filter>Source\MyProject2</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\MyProject2\blocksnakeee.cpp">
+    <ClCompile Include="..\..\Source\MyProject2\stopsnake.cpp">
       <Filter>Source\MyProject2</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\MyProject2\blocksnakeee.h">
+    <ClInclude Include="..\..\Source\MyProject2\stopsnake.h">
       <Filter>Source\MyProject2</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\MyProject2\food.cpp">
