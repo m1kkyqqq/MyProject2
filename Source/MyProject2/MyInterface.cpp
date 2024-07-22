@@ -3,7 +3,7 @@
 
 #include "MyInterface.h"
 
-// Add default functionality here for any IMyInterface functions that are not pure virtual.
+// Add default functionality here for any IMyInterface functions that are not pure virtuals.
 
 void IMyInterface::Interact(AActor* Interactor, bool bIsHead, float SpeedCoeff)
  {
